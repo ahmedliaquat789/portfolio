@@ -1,7 +1,7 @@
 # Muhammad Ahmad - Portfolio
 
 <p align="center">
-  <img src="src/assets/herobg.png" alt="Muhammad Ahmad - Portfolio" width="800"/>
+  <img src="src\assets\ss.png" alt="Muhammad Ahmad - Portfolio" width="800"/>
 </p>
 
 ## Machine Learning & Computer Vision Engineer
