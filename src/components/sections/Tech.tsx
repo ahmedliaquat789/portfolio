@@ -63,7 +63,7 @@ const Tech = () => {
               <SkillCard name={technology.name} icon={technology.icon} />
             </motion.div>
           ))}
-        </div>
+          </div>
       </div>
     </section>
   );

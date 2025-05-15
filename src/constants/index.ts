@@ -156,8 +156,8 @@ const projects: TProject[] = [
       {
         name: "machine learning",
         color: "blue-text-gradient",
-      },
-      {
+  },
+  {
         name: "computer vision",
         color: "green-text-gradient",
       },
@@ -198,8 +198,8 @@ const projects: TProject[] = [
       {
         name: "nlp",
         color: "blue-text-gradient",
-      },
-      {
+  },
+  {
         name: "voice synthesis",
         color: "green-text-gradient",
       },

@@ -78,22 +78,22 @@ const Works = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-20 w-64 h-64 rounded-full bg-teal-500 opacity-10 blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
 
       <div className="relative z-10 pt-10 pb-24">
-        <Header useMotion={true} {...config.sections.works} />
+      <Header useMotion={true} {...config.sections.works} />
 
-        <div className="flex w-full">
-          <motion.p
-            variants={fadeIn("", "", 0.1, 1)}
-            className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]"
-          >
-            {config.sections.works.content}
-          </motion.p>
-        </div>
+      <div className="flex w-full">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]"
+        >
+          {config.sections.works.content}
+        </motion.p>
+      </div>
 
         <div className="mt-20 flex flex-wrap justify-center gap-10">
-          {projects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} index={index} {...project} />
-          ))}
-        </div>
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        ))}
+      </div>
       </div>
     </div>
   );

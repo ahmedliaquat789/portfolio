@@ -34,22 +34,22 @@ const App = () => {
       {isLoading ? (
         <SiteLoader onLoadingComplete={handleLoadingComplete} />
       ) : (
-        <div className="bg-primary relative z-0">
+      <div className="bg-primary relative z-0">
           <div className="relative bg-hero-pattern bg-cover bg-center bg-no-repeat">
             <PrismCanvas />
-            <Navbar />
-            <Hero />
-          </div>
-          <About />
-          <Experience />
-          <Tech />
-          <Works />
-          <div className="relative z-0">
-            <Contact />
-            <StarsCanvas />
-          </div>
-          <Footer />
+          <Navbar />
+          <Hero />
         </div>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
+          <Footer />
+      </div>
       )}
     </BrowserRouter>
   );

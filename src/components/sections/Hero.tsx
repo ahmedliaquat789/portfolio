@@ -72,7 +72,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Right side - Introduction */}
         <div className="flex flex-col items-start max-w-2xl">
           <div className="mb-2 px-4 py-2 bg-black bg-opacity-30 rounded-full text-white text-sm">
@@ -119,7 +119,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
       <div className="absolute right-6 bottom-10 hidden lg:flex flex-col items-center">
         <motion.div 

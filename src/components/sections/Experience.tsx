@@ -49,12 +49,12 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
         <h3 className="text-[28px] font-bold text-white">{experience.title}</h3>
         <span className="text-[#915EFF] text-lg font-semibold">{experience.date}</span>
       </div>
-      <p
+        <p
         className="text-secondary text-[18px] font-semibold mb-6"
-        style={{ margin: 0 }}
-      >
-        {experience.companyName}
-      </p>
+          style={{ margin: 0 }}
+        >
+          {experience.companyName}
+        </p>
 
       <div className="mt-6 space-y-4">
         {experience.points.map((point, index) => (
@@ -85,7 +85,7 @@ const Experience = () => {
       <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-purple-500 opacity-10 blur-3xl animate-pulse" style={{ animationDuration: '4s', animationDelay: '0.7s' }} />
 
       <div className="relative z-10 pt-10 pb-24">
-        <Header useMotion={true} {...config.sections.experience} />
+      <Header useMotion={true} {...config.sections.experience} />
 
         <div className="mt-16 flex flex-col">
           <VerticalTimeline
@@ -93,11 +93,11 @@ const Experience = () => {
             className="custom-timeline"
             animate={true}
           >
-            {experiences.map((experience, index) => (
-              <ExperienceCard key={index} {...experience} />
-            ))}
-          </VerticalTimeline>
-        </div>
+          {experiences.map((experience, index) => (
+            <ExperienceCard key={index} {...experience} />
+          ))}
+        </VerticalTimeline>
+      </div>
       </div>
     </div>
   );

@@ -59,20 +59,20 @@ const About = () => {
       
       {/* Content */}
       <div className="relative z-10 pt-10 pb-24">
-        <Header useMotion={true} {...config.sections.about} />
+      <Header useMotion={true} {...config.sections.about} />
 
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
-        >
-          {config.sections.about.content}
-        </motion.p>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
+      >
+        {config.sections.about.content}
+      </motion.p>
 
         <div className="mt-20 flex flex-wrap justify-center gap-10">
-          {services.map((service, index) => (
-            <ServiceCard key={service.title} index={index} {...service} />
-          ))}
-        </div>
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
       </div>
     </div>
   );

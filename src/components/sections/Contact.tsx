@@ -24,41 +24,41 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-  
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    
+
     // Use formRef.current directly with EmailJS
     if (formRef.current) {
-      emailjs
+    emailjs
         .sendForm(
           SERVICE_ID,
           TEMPLATE_ID,
           formRef.current
-        )
-        .then(
-          () => {
-            setLoading(false);
-            alert("Thank you. I will get back to you as soon as possible.");
-            
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+
             setForm({
               from_name: "",
               from_email: "",
               message: "",
             });
-          },
-          (error) => {
-            setLoading(false);
+        },
+        (error) => {
+          setLoading(false);
             console.error(error);
             alert("Something went wrong. Please try again.");
-          }
-        );
+        }
+      );
     }
   };
 
@@ -73,11 +73,11 @@ const Contact = () => {
         <Header useMotion={false} {...config.contact} />
 
         <div className="mt-12 flex flex-col gap-8">
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
             className="flex flex-col gap-8"
-          >
+        >
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">
                 {config.contact.form.name.span}
@@ -116,23 +116,23 @@ const Contact = () => {
                 rows={7}
                 name="message"
                 value={form.message}
-                onChange={handleChange}
+                  onChange={handleChange}
                 placeholder={config.contact.form.message.placeholder}
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium resize-none"
                 required
-              />
-            </label>
+                />
+              </label>
             
             <input type="hidden" name="to_name" value={config.html.fullName} />
             <input type="hidden" name="to_email" value={config.html.email} />
             
-            <button
-              type="submit"
+          <button
+            type="submit"
               className="bg-[#915EFF] py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-opacity-80 transition-all"
-            >
-              {loading ? "Sending..." : "Send"}
-            </button>
-          </form>
+          >
+            {loading ? "Sending..." : "Send"}
+          </button>
+        </form>
         </div>
       </motion.div>
 
