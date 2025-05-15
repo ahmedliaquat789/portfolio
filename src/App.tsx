@@ -4,40 +4,53 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
   Works,
   StarsCanvas,
+  PrismCanvas,
+  Footer,
 } from "./components";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { config } from "./constants/config";
+import SiteLoader from "./components/layout/SiteLoader";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     if (document.title !== config.html.title) {
       document.title = config.html.title;
     }
   }, []);
 
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
   return (
     <BrowserRouter>
-      <div className="bg-primary relative z-0">
-        <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
-          <Navbar />
-          <Hero />
+      {isLoading ? (
+        <SiteLoader onLoadingComplete={handleLoadingComplete} />
+      ) : (
+        <div className="bg-primary relative z-0">
+          <div className="relative bg-hero-pattern bg-cover bg-center bg-no-repeat">
+            <PrismCanvas />
+            <Navbar />
+            <Hero />
+          </div>
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <div className="relative z-0">
+            <Contact />
+            <StarsCanvas />
+          </div>
+          <Footer />
         </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
+      )}
     </BrowserRouter>
   );
 };

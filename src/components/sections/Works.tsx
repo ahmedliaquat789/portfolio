@@ -18,7 +18,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
   sourceCodeLink,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="w-full sm:w-[400px] md:w-[450px]">
       <Tilt
         glareEnable
         tiltEnable
@@ -26,12 +26,12 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
         tiltMaxAngleY={30}
         glareColor="#aaa6c3"
       >
-        <div className="bg-tertiary w-full rounded-2xl p-5 sm:w-[300px]">
-          <div className="relative h-[230px] w-full">
+        <div className="bg-tertiary w-full rounded-2xl p-5">
+          <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "1/1" }}>
             <img
               src={image}
               alt={name}
-              className="h-full w-full rounded-2xl object-cover"
+              className="h-full w-full object-cover transition-transform hover:scale-110 duration-300"
             />
             <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
               <div
@@ -65,25 +65,38 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
 
 const Works = () => {
   return (
-    <>
-      <Header useMotion={true} {...config.sections.works} />
+    <div className="relative min-h-screen">
+      {/* Radial gradient background */}
+      <div className="absolute inset-0 bg-radial-gradient-pink opacity-5" />
+      
+      {/* Gradient line at the top */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-30" />
+      
+      {/* Animated glowing elements */}
+      <div className="absolute -top-10 right-20 w-56 h-56 rounded-full bg-pink-500 opacity-10 blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
+      <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-blue-600 opacity-10 blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-20 w-64 h-64 rounded-full bg-teal-500 opacity-10 blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
 
-      <div className="flex w-full">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]"
-        >
-          {config.sections.works.content}
-        </motion.p>
-      </div>
+      <div className="relative z-10 pt-10 pb-24">
+        <Header useMotion={true} {...config.sections.works} />
 
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+        <div className="flex w-full">
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]"
+          >
+            {config.sections.works.content}
+          </motion.p>
+        </div>
+
+        <div className="mt-20 flex flex-wrap justify-center gap-10">
+          {projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "works");

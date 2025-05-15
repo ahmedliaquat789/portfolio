@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <circle cx="64" cy="64" r="60" fill="#4B0082"/>
+  <path d="M45 40 Q40 50 35 60 Q30 70 25 75 Q20 80 25 85 Q30 90 45 95 Q60 100 64 100 Q68 100 83 95 Q98 90 103 85 Q108 80 103 75 Q98 70 93 60 Q88 50 83 40 Q78 30 64 30 Q50 30 45 40 Z" fill="#8A2BE2" opacity="0.8"/>
+  <path d="M30 40 Q25 50 20 60 Q15 70 20 80 Q25 90 40 95 Q55 100 64 100 Q73 100 88 95 Q103 90 108 80 Q113 70 108 60 Q103 50 98 40 Q93 30 64 30 Q35 30 30 40 Z" fill="#DA70D6" opacity="0.6"/>
+  <circle cx="45" cy="55" r="5" fill="white" opacity="0.9"/>
+  <circle cx="83" cy="55" r="5" fill="white" opacity="0.9"/>
+  <text x="64" y="85" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="bold" fill="white">GAN</text>
+</svg> 

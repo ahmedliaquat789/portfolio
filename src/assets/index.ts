@@ -21,14 +21,16 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-
+// Project images
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import brainTumor from "./brain.webp";
+import musicGenre from "./music.webp";
+import textToSpeech from "./text to speech.webp";
+import animateStill from "./animate still.webp";
+import hairColor from "./hair color.webp";
+import aiMakeup from "./ai makeup.png";
 
 export {
   logo,
@@ -52,11 +54,13 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   carrent,
   jobit,
   tripguide,
+  brainTumor,
+  musicGenre,
+  textToSpeech,
+  animateStill,
+  hairColor,
+  aiMakeup,
 };

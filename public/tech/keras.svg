@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="keras-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ee0000"/>
+      <stop offset="100%" stop-color="#c00000"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" fill="url(#keras-gradient)"/>
+  <path fill="#ffffff" d="M64.15 29.58v27.57l-18.75-13.8v41.45L26.94 71.23V42.03L64.15 14.46l37.94 27.57v29.2l-18.74 13.8V43.35l-19.19 13.8z"/>
+</svg> 

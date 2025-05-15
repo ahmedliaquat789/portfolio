@@ -45,22 +45,36 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <>
-      <Header useMotion={true} {...config.sections.about} />
+    <div className="relative min-h-screen">
+      {/* Radial gradient background */}
+      <div className="absolute inset-0 bg-radial-gradient-purple opacity-5" />
+      
+      {/* Gradient line at the top */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-30" />
+      
+      {/* Animated glowing elements */}
+      <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-purple-500 opacity-20 blur-3xl animate-pulse" />
+      <div className="absolute bottom-40 right-20 w-60 h-60 rounded-full bg-blue-500 opacity-10 blur-3xl animate-pulse" style={{ animationDuration: '4s', animationDelay: '1s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-indigo-500 opacity-10 blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '0.5s' }} />
+      
+      {/* Content */}
+      <div className="relative z-10 pt-10 pb-24">
+        <Header useMotion={true} {...config.sections.about} />
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
-      >
-        {config.sections.about.content}
-      </motion.p>
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
+        >
+          {config.sections.about.content}
+        </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10 max-sm:justify-center">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+        <div className="mt-20 flex flex-wrap justify-center gap-10">
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

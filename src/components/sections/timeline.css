@@ -1,0 +1,70 @@
+/* Custom styles for the vertical timeline */
+.custom-timeline.vertical-timeline.vertical-timeline--one-column-left {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Move line to left side and shorten it */
+.custom-timeline.vertical-timeline.vertical-timeline--one-column-left:before {
+  left: 100px;
+  background: rgba(255, 255, 255, 0.15);
+  height: 65%; /* Shorter timeline bar */
+  top: 20%; /* Center it vertically */
+}
+
+/* Position timeline element with content on right */
+.custom-timeline.vertical-timeline.vertical-timeline--one-column-left .vertical-timeline-element {
+  margin: 1em 0;
+}
+
+.custom-timeline.vertical-timeline.vertical-timeline--one-column-left .vertical-timeline-element-icon {
+  left: 70px;
+  width: 60px;
+  height: 60px;
+}
+
+.custom-timeline.vertical-timeline.vertical-timeline--one-column-left .vertical-timeline-element-content {
+  margin-left: 160px;
+  padding: 1em 0 1em 1em;
+  width: 85%;
+  max-width: 900px;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Hide the arrow since we're using a transparent background */
+.custom-timeline.vertical-timeline.vertical-timeline--one-column-left .vertical-timeline-element-content-arrow {
+  display: none;
+}
+
+/* Hide the default date as we're handling it in the card */
+.custom-timeline.vertical-timeline.vertical-timeline--one-column-left .vertical-timeline-element-date {
+  display: none;
+}
+
+@media only screen and (max-width: 1170px) {
+  .custom-timeline.vertical-timeline.vertical-timeline--one-column-left .vertical-timeline-element-content {
+    margin-left: 160px;
+    width: calc(100% - 180px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .custom-timeline.vertical-timeline.vertical-timeline--one-column-left .vertical-timeline-element-content {
+    margin-left: 120px;
+    width: calc(100% - 140px);
+  }
+  
+  .custom-timeline.vertical-timeline.vertical-timeline--one-column-left:before {
+    left: 70px;
+    height: 65%;
+    top: 20%;
+  }
+  
+  .custom-timeline.vertical-timeline.vertical-timeline--one-column-left .vertical-timeline-element-icon {
+    left: 40px;
+    width: 60px;
+    height: 60px;
+  }
+} 

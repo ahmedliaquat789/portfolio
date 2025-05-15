@@ -13,6 +13,12 @@ type TConfig = {
   hero: {
     name: string;
     p: string[];
+    title: string;
+    location: string;
+    social: {
+      github: string;
+      linkedin: string;
+    };
   };
   contact: {
     form: {
@@ -40,13 +46,19 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Portfolio",
+    fullName: "Muhammad Ahmad",
+    email: "ahmdliaqat@gmail.com",
   },
   hero: {
-    name: "John Doe",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    name: "Muhammad Ahmad",
+    p: ["Specialized in developing intelligent", "computer vision systems and machine learning"],
+    title: "Machine Learning & Computer Vision Engineer",
+    location: "Pakistan",
+    social: {
+      github: "https://github.com/ahmedliaquat789",
+      linkedin: "https://linkedin.com/in/ahmedliaquat742/"
+    }
   },
   contact: {
     p: "Get in touch",
@@ -66,16 +78,16 @@ export const config: TConfig = {
   sections: {
     about: {
       p: "Introduction",
-      h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      h2: "About Me.",
+      content: `I'm a Computer Science graduate from COMSATS University, Wah Campus, with a strong passion for AI, Machine Learning, Computer Vision, and Generative AI. I've built expertise in Python, Deep Learning, and full-stack development using React.js, Flask, and AWS.
+
+My experience includes developing real-world AI solutions such as brain tumor classifiers, music genre detectors, and video transformation tools using Stable Diffusion, GANs, and ESRGAN. I've also delivered scalable applications like AI-based hair color changers and virtual makeup systems.
+
+I'm driven to innovate in GenAI and Computer Vision, and I aim to contribute to impactful, production-grade solutions through continuous learning and collaboration.`,
     },
     experience: {
-      p: "What I have done so far",
-      h2: "Work Experience.",
+      p: "My academic background",
+      h2: "Education",
     },
     feedbacks: {
       p: "What others say",

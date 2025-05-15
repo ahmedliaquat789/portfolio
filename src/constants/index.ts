@@ -3,7 +3,6 @@ import type {
   TService,
   TTechnology,
   TExperience,
-  TTestimonial,
   TProject,
 } from "../types";
 
@@ -24,14 +23,14 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
+  // Project images
+  brainTumor,
+  musicGenre,
+  textToSpeech,
+  animateStill,
+  hairColor,
+  aiMakeup,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -40,8 +39,16 @@ export const navLinks: TNavLink[] = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "tech",
+    title: "Skills",
+  },
+  {
+    id: "works",
+    title: "Projects",
+  },
+  {
+    id: "education",
+    title: "Education",
   },
   {
     id: "contact",
@@ -51,224 +58,222 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: "Web Developer",
+    title: "Machine Learning",
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
+    title: "Computer Vision",
     icon: backend,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Python Developer",
+    icon: mobile,
   },
 ];
 
 const technologies: TTechnology[] = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
+    name: "Python",
+    icon: "/tech/python.svg",
   },
   {
     name: "JavaScript",
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
+    name: "React.js",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Flask",
+    icon: "/tech/flask.svg",
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "FastAPI",
+    icon: "/tech/fastapi.svg",
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "REST API",
+    icon: "/tech/restapi.svg",
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "GAN",
+    icon: "/tech/gan.svg",
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "TensorFlow",
+    icon: "/tech/tensorflow.svg",
   },
   {
-    name: "git",
-    icon: git,
+    name: "PyTorch",
+    icon: "/tech/pytorch.svg",
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "OpenCV",
+    icon: "/tech/opencv.svg",
   },
   {
-    name: "docker",
+    name: "Scikit-learn",
+    icon: "/tech/scikit-learn.svg",
+  },
+  {
+    name: "Keras",
+    icon: "/tech/keras.svg",
+  },
+  {
+    name: "NumPy",
+    icon: "/tech/numpy.svg",
+  },
+  {
+    name: "Pandas",
+    icon: "/tech/pandas.svg",
+  },
+  {
+    name: "Docker",
     icon: docker,
   },
 ];
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "BS Computer Science",
+    companyName: "COMSATS University Islamabad, Wah Campus",
+    icon: "/tech/education.svg",
+    iconBg: "#1877F2",
+    date: "2021 - 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Computer Science graduate from COMSATS University, Wah Campus, with a strong foundation in AI, Machine Learning, and Software Development."
     ],
-  },
-  {
-    title: "React Native Developer",
-    companyName: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    companyName: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    companyName: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-const testimonials: TTestimonial[] = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: "Brain Tumor Classification",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Trained a ResNet-50 model to classify brain MRIs into four categories: glioma, meningioma, pituitary tumor, and no tumor achieving high accuracy on a labeled medical dataset.",
     tags: [
       {
-        name: "react",
+        name: "machine learning",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "computer vision",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "resnet50",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    sourceCodeLink: "https://github.com/",
+    image: brainTumor,
+    sourceCodeLink: "https://github.com/ahmedliaquat789/fyp",
   },
   {
-    name: "Job IT",
+    name: "Music Genre Classification & Recommendation System",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Designed a Feedforward Neural Network (FNN) trained on the GTZAN dataset to classify music genres from uploaded audio files and provide intelligent song recommendations.",
     tags: [
       {
-        name: "react",
+        name: "audio processing",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "neural networks",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "recommendation",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    sourceCodeLink: "https://github.com/",
+    image: musicGenre,
+    sourceCodeLink: "https://github.com/ahmedliaquat789",
   },
   {
-    name: "Trip Guide",
+    name: "Text-to-Speech System",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Built a real-time text-to-speech pipeline integrating natural language preprocessing and deep voice synthesis models for lifelike audio generation.",
     tags: [
       {
-        name: "nextjs",
+        name: "nlp",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "voice synthesis",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "deep learning",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    sourceCodeLink: "https://github.com/",
+    image: textToSpeech,
+    sourceCodeLink: "https://github.com/ahmedliaquat789",
+  },
+  {
+    name: "Animate Still Images",
+    description:
+      "Developed an animated portrait generator using Stable Diffusion and ControlNet to animate static images based on facial motion prompts and text input.",
+    tags: [
+      {
+        name: "stable diffusion",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "controlnet",
+        color: "green-text-gradient",
+      },
+      {
+        name: "computer vision",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: animateStill,
+    sourceCodeLink: "https://github.com/ahmedliaquat789",
+  },
+  {
+    name: "Hair Color Changer",
+    description:
+      "Developed a Hair Color Transformation tool using StyleGAN2 and custom hair segmentation for accurate, frame-wise color editing and full video synthesis.",
+    tags: [
+      {
+        name: "stylegan2",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "segmentation",
+        color: "green-text-gradient",
+      },
+      {
+        name: "video editing",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: hairColor,
+    sourceCodeLink: "https://github.com/ahmedliaquat789",
+  },
+  {
+    name: "AI Makeup System",
+    description:
+      "Created an AI-based makeup application tool with face detection, facial recognition, and real-time makeup effects using deep learning and computer vision techniques.",
+    tags: [
+      {
+        name: "face detection",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "deep learning",
+        color: "green-text-gradient",
+      },
+      {
+        name: "augmented reality",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: aiMakeup,
+    sourceCodeLink: "https://github.com/ahmedliaquat789",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };
