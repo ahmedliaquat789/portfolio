@@ -10,7 +10,7 @@ Welcome to my portfolio repository! I'm Muhammad Ahmad, a skilled Machine Learni
 
 ## 🌐 Live Portfolio
 
-Visit my portfolio at: [https://ahmedliaquat789.github.io/portfolio](https://ahmedliaquat789.github.io/portfolio)
+Visit my portfolio at: [https://portfolio-ahmedliaquat789s-projects.vercel.app]
 
 ## 💼 Skills & Expertise
 
